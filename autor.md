@@ -12,7 +12,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [ ] equal
 - [ ] find
 - [ ] find_if
-- [ ] minmax
+- [x] minmax
 - [ ] partition
 - [ ] reverse
 - [ ] rotate
