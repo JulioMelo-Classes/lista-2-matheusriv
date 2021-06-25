@@ -40,20 +40,20 @@ bool equal(InputIt1 first1, InputIt1 last1,
            Equal eq )
 {
     int size1=0, size2=0;
-    for(; first1 != last1; ++first1){
+    for(InputIt1 i = first1; i != last1; ++i){
         size1++;
     }
-    for(; first2 != last2; ++first2){
+    for(InputIt1 i = first2; i != last2; ++i){
         size2++;
     }
 
     if(size1 != size2)
         return false;
     else{ 
-      for(; first2 != last2; ++first1, ++first2){
-          if(eq(*first1,*first2) == false) 
-              return false;
-      }
+        for(; first2 != last2; ++first1, ++first2){
+            if(eq(*first1,*first2) == false) 
+                return false;
+        }
     }
     return true;
 
