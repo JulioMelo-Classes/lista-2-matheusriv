@@ -14,9 +14,9 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [x] find_if
 - [x] minmax
 - [ ] partition
-- [ ] reverse
-- [ ] rotate
-- [ ] sort
+- [x] reverse
+- [x] rotate
+- [x] sort
 - [ ] unique
 
 

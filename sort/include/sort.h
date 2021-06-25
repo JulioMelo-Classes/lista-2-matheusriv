@@ -13,10 +13,24 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+bool cmp(const int &a, const int &b){
+    return (a < b);
+}
+
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)
 {
-    // TODO
+    for(; first != last; ++first){
+        for(ForwardIt j = first+1; j != last; ++j){ 
+            if(!cmp(*first,*j)){
+                //swap
+                auto temp = *first;
+                *first = *j;
+                *j = temp;
+            }
+        }
+    }
+
 }
 
 }
