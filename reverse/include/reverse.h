@@ -16,7 +16,9 @@ namespace graal {
 template<class BidirIt>
 void reverse(BidirIt first, BidirIt last)
 {
-    // TODO
+    while((first != last) && (first != --last)){
+        std::iter_swap(first++, last);
+    }
 }
 
 }
