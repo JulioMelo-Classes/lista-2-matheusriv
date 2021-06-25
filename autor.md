@@ -10,7 +10,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 
 - [x] copy
 - [ ] equal
-- [ ] find
+- [x] find
 - [ ] find_if
 - [x] minmax
 - [ ] partition
