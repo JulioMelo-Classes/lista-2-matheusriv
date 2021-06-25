@@ -13,11 +13,19 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+bool p(const int &a){
+    return true;
+}
+
 template<class InputIt, class UnaryPredicate>
 InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
 {
-    // TODO
-    return first;
+    while(first != last){
+        if(p(*first))
+            return first;
+        first++;
+    }
+    return last;
 }
 
 }
