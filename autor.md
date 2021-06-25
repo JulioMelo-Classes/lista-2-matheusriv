@@ -9,7 +9,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 # Questões Finalizadas
 
 - [x] copy
-- [ ] equal
+- [x] equal
 - [x] find
 - [x] find_if
 - [x] minmax
