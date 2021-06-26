@@ -16,28 +16,20 @@ namespace graal {
 template<class ForwardIt>
 ForwardIt rotate(ForwardIt first, ForwardIt n_first, ForwardIt last)
 {
-   if(first == n_first) 
-      return last;
-   if(n_first == last) 
-      return first;
- 
-   ForwardIt read, write, next_read; 
-   read = n_first, write = first, next_read = first; 
- 
-   while(read != last){
-      if(write == next_read) 
-          next_read = read; 
-          
-      auto temp = *write;
-      *write = *read;
-      *read = temp;
-      write++;
-      read++;
-   }
- 
-   rotate(write, next_read, last);
-
-   return write;
+    ForwardIt next = n_first;
+    while(first!=next){
+        auto temp = *first;
+        *first = *next;
+        *next = temp;
+        first++;
+        next++;
+        if(next==last) 
+            next = n_first;
+        else if(first==n_first) 
+            n_first = next;
+    }
+    
+    return first;
 
 }
 
