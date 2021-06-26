@@ -13,11 +13,20 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+bool p( const int &a){
+    return true;
+}
+
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 {
-    // TODO
-    return false;
+    if(first==last) return false;
+
+    for(; first!=last; ++first){
+        if(!p(*first)) 
+            return false;
+    }
+    return true;
 }
 
 /*! 
@@ -26,7 +35,10 @@ bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 template<class InputIt, class UnaryPredicate>
 bool any_of(InputIt first, InputIt last, UnaryPredicate p)
 {
-    // TODO
+    for(; first!=last; ++first){
+        if(p(*first)) 
+            return true;
+    }
     return false;
 }
 
@@ -36,8 +48,11 @@ bool any_of(InputIt first, InputIt last, UnaryPredicate p)
 template<class InputIt, class UnaryPredicate>
 bool none_of(InputIt first, InputIt last, UnaryPredicate p)
 {
-    // TODO
-    return false;
+    for(; first!=last; ++first){
+        if(p(*first)) 
+            return false;
+    }
+    return true;
 }
 
 }

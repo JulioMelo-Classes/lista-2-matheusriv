@@ -8,6 +8,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 
 # Questões Finalizadas
 
+- [x] all_any_none_of
 - [x] copy
 - [x] equal
 - [x] find
@@ -17,7 +18,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [x] reverse
 - [x] rotate
 - [x] sort
-- [ ] unique
+- [x] unique
 
 
 --------
