@@ -1,7 +1,7 @@
 # Rotate
 
 Implemente uma função chamada rotate que recebe um range \[first,last), um _iterator_ n_first neste range e faz uma rotação à esquerda
-dos elementos no range recebido de forma que n_first se torne o primeiro elemento do e n_first-1 se torna o último elemento. A função
+dos elementos no range recebido de forma que n_first se torne o primeiro elemento do range e n_first-1 se torna o último elemento. A função
 deve retornar um iterator que aponta para a nova posição que se encontra o primeiro elemento do range antes da rotação.
 ```c++
 template < typename Itr >
