@@ -24,9 +24,7 @@ void sort(ForwardIt first, ForwardIt last, Comparison cmp)
         for(ForwardIt j = first+1; j != last; ++j){ 
             if(!cmp(*first,*j)){
                 //swap
-                auto temp = *first;
-                *first = *j;
-                *j = temp;
+                std::swap(*first,*j);
             }
         }
     }
