@@ -17,7 +17,7 @@ template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
 {
     // TODO
-    return last;
+    return first;
 }
 
 }
