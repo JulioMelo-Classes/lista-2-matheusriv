@@ -6,3 +6,5 @@ equal/build/
 reverse/build/
 rotate/build/
 sort/build/
+partition/build/
+unique/build/
