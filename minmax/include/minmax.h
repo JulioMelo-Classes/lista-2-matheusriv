@@ -31,35 +31,34 @@ bool cmp( const int &a, const int &b){
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax( Itr first, Itr last, Compare cmp )
 {
+    int size=0, equal=0;
     auto max = first, min = first;
+    auto minElem = *first, maxElem = *first;
 
     if(first == last || ++first == last)
         return { min, max };
 
-    if(cmp(*first, *min)) min = first;
-    else max = first;
+    for(Itr i=first; i!=last; ++i){
+        size++;
+        if(cmp(*i,minElem)) minElem=*i;   
+        if(!cmp(*i,maxElem)) maxElem=*i;  
+        if(*i==*first) equal++;
+    }
 
-    for(Itr i = first; i != last; i++){
-        auto a = first;
-        if(++first == last){
-            if(cmp(*a, *min)) 
-                min = a;
-            else if(!(cmp(*a, *max))) 
-                max = a;
-            break;
+    if(size==equal){
+        max = --last;
+        return { first, max };
+    }
+    else{ 
+        for(Itr i=first; i!=last; ++i){
+            if(*i==maxElem){ 
+                max = i;
+            }
         }
-        else{
-            if(cmp(*first, *a)){
-                if(cmp(*first, *min)) 
-                    min = first;
-                if(!(cmp(*a, *max))) 
-                    max = a;
-            } 
-            else{
-                if(cmp(*a, *min)) 
-                    min = a;
-                if(!(cmp(*first, *max))) 
-                    max = first;
+        for(Itr i=first; i!=last; ++i){
+            if(*i==minElem){ 
+                min = i;
+                break; 
             }
         }
     }
