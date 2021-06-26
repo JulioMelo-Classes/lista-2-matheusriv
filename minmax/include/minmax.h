@@ -47,7 +47,7 @@ std::pair<Itr, Itr> minmax( Itr first, Itr last, Compare cmp )
 
     if(size==equal){
         max = --last;
-        return { first, max };
+        return { min, max };
     }
     else{ 
         for(Itr i=first; i!=last; ++i){
