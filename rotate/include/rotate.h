@@ -18,9 +18,8 @@ ForwardIt rotate(ForwardIt first, ForwardIt n_first, ForwardIt last)
 {
     ForwardIt next = n_first;
     while(first!=next){
-        std::iter_swap(first,next);
-        first++;
-        next++;
+        std::swap(*first,*next);
+        first++, next++;
         if(next==last) 
             next = n_first;
         else if(first==n_first) 
