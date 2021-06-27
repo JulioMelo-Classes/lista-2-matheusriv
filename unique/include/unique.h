@@ -13,12 +13,6 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-bool eq(const int &a, const int &b){
-    if( a == b )  
-        return true;
-    else
-        return false;
-}
 
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
@@ -27,10 +21,9 @@ InputIt unique( InputIt first, InputIt last, Equal eq )
         return last;
  
     InputIt comp = first;
-    while(first != last){
+    for(; first != last; ++first){
         if(eq(*comp,*first)==false && ++comp != first)
             *(++comp) = *first;
-        ++first;
     }
 
     return ++comp;

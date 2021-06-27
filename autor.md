@@ -18,7 +18,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [x] reverse
 - [x] rotate
 - [x] sort
-- [x] unique
+- [] unique
 
 
 --------
