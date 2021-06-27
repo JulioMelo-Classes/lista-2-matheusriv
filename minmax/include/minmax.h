@@ -23,11 +23,7 @@ namespace graal {
  * @return Um std::pair contendo o menor e maior elemento, nesta ordem
  *
  */
-
-bool cmp( const int &a, const int &b){
-    return a < b;
-}
-
+ 
 template <typename Itr, typename Compare >
 std::pair<Itr, Itr> minmax( Itr first, Itr last, Compare cmp )
 {

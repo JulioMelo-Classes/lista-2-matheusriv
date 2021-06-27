@@ -13,9 +13,6 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-bool cmp(const int &a, const int &b){
-    return (a < b);
-}
 
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)

@@ -13,9 +13,6 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-bool p( const int &a){
-    return true;
-}
 
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)

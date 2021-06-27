@@ -14,13 +14,6 @@ namespace graal {
  * TODO: documentação no estilo doxygen
  */
 
-bool eq(const int &a, const int &b){
-    if(a == b)
-        return true;
-    else
-        return false;
-}
-
 template<class InputIt1, class InputIt2, class Equal>
 bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
 {
