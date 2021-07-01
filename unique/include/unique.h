@@ -14,6 +14,10 @@ namespace graal {
  * TODO: documentação no estilo doxygen
  */
 
+/*
+o problema aqui é que vários elementos do range podem ser repetidos em sequencia, assim vc não tem como fazer apenas um for
+20%
+*/
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
 {

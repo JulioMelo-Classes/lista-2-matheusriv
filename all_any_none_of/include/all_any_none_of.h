@@ -13,7 +13,9 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
-
+/*
+80%, faltou a documentação
+*/
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 {

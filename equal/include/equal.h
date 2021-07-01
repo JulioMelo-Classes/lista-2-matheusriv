@@ -14,11 +14,14 @@ namespace graal {
  * TODO: documentação no estilo doxygen
  */
 
+/*
+80%
+*/
 template<class InputIt1, class InputIt2, class Equal>
 bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
 {
     for(; first1 != last1; ++first1, ++first2)
-        if(eq(*first1,*first2) == false) return false;
+        if(eq(*first1,*first2) == false) return false; //aqui vc poderia fazer if(!eq(*first,*first2))
 
     return true;
 }

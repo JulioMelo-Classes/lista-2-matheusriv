@@ -14,6 +14,9 @@ namespace graal {
  * TODO: documentação no estilo doxygen
  */
 
+/*
+80%
+*/
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)
 {

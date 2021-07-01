@@ -13,10 +13,13 @@ namespace graal {
 /*! 
  * TODO: documentação no estilo doxygen
  */
+ /*
+ 80%
+ */
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
 {
-    for(; first!=last; ++first){
+    for(; first!=last; ++first){//realmente não entendi o que vc quer fazer com tantos laços... vc só precisava de 1, mas ok
         while(p(*first)){
             ++first;
             if(first==last) 
